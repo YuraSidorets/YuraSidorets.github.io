@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="gof.js"></script>
+  </head>
+  <body>
+      <div style="margin-bottom:5px">
+            <input type="button" value="Stop" onclick="togglePause();" />
+            <input type="button" value="Run" onclick="toggleRun();" /> 
+            <input type="button" value="Clear" onclick="toggleClear();" /> 
+            <input type="button" value="Randomize" onclick="randomize();" />
+            <span> | </span>       
+            <span>Width: </span><input id="canvasWidth" size="3" style="width:40px" type="text" value="">
+            <span>Height: </span><input id="canvasHeight" size="3" style="width:40px" type="text" value="" >
+            <span>Cell Size: </span><input id="cellSize" size="3" style="width:40px" type="text" value="" >
+            <input type="button" value="Set Grid Size" onclick="setSize();" />       
+      </div>
+      <script>
+        function setSize() {
+            setCanvasSize(document.getElementById("canvasWidth").value, document.getElementById("canvasHeight").value, document.getElementById("cellSize").value);
+        }
+      </script>
+  </body>
+</html>
